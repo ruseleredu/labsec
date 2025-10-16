@@ -10,7 +10,7 @@ import rehypeKatex from 'rehype-katex';
 
 const config: Config = {
   title: 'LabSEC',
-  tagline: 'Laboratório de Sistemas Embarcados e Computação',
+  tagline: 'Laboratório de Sistemas Embarcados e Computação.',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -30,8 +30,7 @@ const config: Config = {
   projectName: 'labsec', // Usually your repo name.
   deploymentBranch: 'gh-pages',
   trailingSlash: false,
-
-
+  onDuplicateRoutes: 'warn', // or 'throw'
   onBrokenLinks: "throw",
 
   markdown: {
@@ -136,32 +135,68 @@ const config: Config = {
           ],
         },
         {
-          title: 'Community',
+          title: "Sistemas",
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: "Consulta Diários",
+              href: "https://sistemas2.utfpr.edu.br/url/1141",
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              label: "Permanências",
+              href: "https://sistemas2.utfpr.edu.br/url/1026",
             },
             {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
+              label: "Planejamento Aulas",
+              href: "https://sistemas2.utfpr.edu.br/url/1890",
+            },
+            {
+              label: "Lançamentos",
+              href: "https://sistemas2.utfpr.edu.br/url/1514",
+            },
+            {
+              label: "Mapa de Professor",
+              href: "https://sistemas2.utfpr.edu.br/url/1022",
+            },
+            {
+              label: "Mapa de Sala",
+              href: "https://sistemas2.utfpr.edu.br/url/1934",
             },
           ],
         },
         {
-          title: 'More',
+          title: "UTFPR",
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
+              label: "Moodle",
+              href: "https://moodle.utfpr.edu.br/",
             },
             {
-              label: 'GitHub',
-              href: 'https://github.com/ruseleredu/labsec',
+              label: "Webmail",
+              href: "https://webmail.utfpr.edu.br/",
+            },
+            {
+              label: "Sistemas",
+              href: "https://sistemas2.utfpr.edu.br/",
+            },
+            {
+              label: "SEI",
+              href: "https://sei.utfpr.edu.br/",
+            },
+            {
+              label: "Chat",
+              href: "https://chat.utfpr.edu.br/",
+            },
+            {
+              label: "Ajuda",
+              href: "https://ajuda.utfpr.edu.br/",
+            },
+            {
+              label: "Calendário",
+              href: "https://www.utfpr.edu.br/alunos/calendario",
+            },
+            {
+              label: "TCC",
+              href: "https://nupet.daelt.ct.utfpr.edu.br/tcc/engenharia/index.html",
             },
           ],
         },
