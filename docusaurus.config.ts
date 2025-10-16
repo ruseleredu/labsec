@@ -1,6 +1,10 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+
+// https://docusaurus.io/docs/markdown-features/math-equations
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -31,11 +35,23 @@ const config: Config = {
   onBrokenLinks: "throw",
 
   markdown: {
-    //mermaid: true, // Diagrams can be rendered using Mermaid in a code block.
+    mermaid: true, // Diagrams can be rendered using Mermaid in a code block.
     hooks: {
       onBrokenMarkdownLinks: "warn", // or 'throw'
     },
   },
+  themes: ['@docusaurus/theme-mermaid'],
+
+  // Include the KaTeX CSS for math rendering
+  stylesheets: [
+    {
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
+      type: 'text/css',
+      integrity:
+        'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
+      crossorigin: 'anonymous',
+    },
+  ],
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -55,6 +71,8 @@ const config: Config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://ruseleredu.github.io/labsec/edit/main/',
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
         },
         blog: {
           showReadingTime: true,
@@ -85,9 +103,9 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'My Site',
+      title: 'LabSEC',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'LabSEC Logo',
         src: 'img/logo.svg',
       },
       items: [
@@ -97,9 +115,9 @@ const config: Config = {
           position: 'left',
           label: 'Tutorial',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        { to: '/blog', label: 'Blog', position: 'left' },
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/ruseleredu/labsec',
           label: 'GitHub',
           position: 'right',
         },
@@ -143,12 +161,12 @@ const config: Config = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/ruseleredu/labsec',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} LabSEC, Inc. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

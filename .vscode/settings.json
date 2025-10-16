@@ -13,5 +13,8 @@
     "**/node_modules": true,
     "**/.docusaurus": true,
     "**/build": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   }
 }
