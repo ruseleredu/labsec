@@ -5,26 +5,62 @@
  */
 
 /* You can override the default Infima variables here. */
+
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  /* Light Mode Colors (from previous response, slightly refined) */
+  --ifm-color-primary: #1e88e5;
+  /* A vibrant blue from "LabSEC" */
+  --ifm-color-primary-dark: #1976d2;
+  --ifm-color-primary-darker: #1769cb;
+  --ifm-color-primary-darkest: #155bbd;
+  --ifm-color-primary-light: #42a5f5;
+  --ifm-color-primary-lighter: #64b5f6;
+  --ifm-color-primary-lightest: #90caf9;
+
+  --ifm-color-secondary: #8bc34a;
+  /* A bright green from "SEC" */
+  --ifm-color-secondary-dark: #7cb342;
+  --ifm-color-secondary-darker: #70a73b;
+  --ifm-color-secondary-darkest: #629433;
+  --ifm-color-secondary-light: #aed581;
+  --ifm-color-secondary-lighter: #c5e1a5;
+  --ifm-color-secondary-lightest: #dce775;
+
+  /* Dark Mode Colors */
+  --ifm-color-primary-dark-mode: #5e9ee0;
+  /* Lighter blue for dark background */
+  --ifm-color-primary-dark-mode-dark: #4e92d9;
+  --ifm-color-primary-dark-mode-darker: #4286d3;
+  --ifm-color-primary-dark-mode-darkest: #3471c2;
+  --ifm-color-primary-dark-mode-light: #72aee8;
+  --ifm-color-primary-dark-mode-lighter: #86b9ec;
+  --ifm-color-primary-dark-mode-lightest: #a0c9f0;
+
+  --ifm-color-secondary-dark-mode: #aed581;
+  /* Lighter green for dark background */
+  --ifm-color-secondary-dark-mode-dark: #9bc86c;
+  --ifm-color-secondary-dark-mode-darker: #8fb85c;
+  --ifm-color-secondary-dark-mode-darkest: #7da54b;
+  --ifm-color-secondary-dark-mode-light: #c2e09b;
+  --ifm-color-secondary-dark-mode-lighter: #d6eda8;
+  --ifm-color-secondary-dark-mode-lightest: #ecfbcd;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+/* Example of how to apply dark mode colors in Docusaurus if not using CSS variables directly */
+html[data-theme='dark'] {
+  --ifm-color-primary: var(--ifm-color-primary-dark-mode);
+  --ifm-color-primary-dark: var(--ifm-color-primary-dark-mode-dark);
+  --ifm-color-primary-darker: var(--ifm-color-primary-dark-mode-darker);
+  --ifm-color-primary-darkest: var(--ifm-color-primary-dark-mode-darkest);
+  --ifm-color-primary-light: var(--ifm-color-primary-dark-mode-light);
+  --ifm-color-primary-lighter: var(--ifm-color-primary-dark-mode-lighter);
+  --ifm-color-primary-lightest: var(--ifm-color-primary-dark-mode-lightest);
+
+  --ifm-color-secondary: var(--ifm-color-secondary-dark-mode);
+  --ifm-color-secondary-dark: var(--ifm-color-secondary-dark-mode-dark);
+  --ifm-color-secondary-darker: var(--ifm-color-secondary-dark-mode-darker);
+  --ifm-color-secondary-darkest: var(--ifm-color-secondary-dark-mode-darkest);
+  --ifm-color-secondary-light: var(--ifm-color-secondary-dark-mode-light);
+  --ifm-color-secondary-lighter: var(--ifm-color-secondary-dark-mode-lighter);
+  --ifm-color-secondary-lightest: var(--ifm-color-secondary-dark-mode-lightest);
 }
