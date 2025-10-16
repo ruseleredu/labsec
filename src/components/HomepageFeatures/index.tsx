@@ -24,6 +24,19 @@ const FeatureList: FeatureItem[] = [
       </>
     ),
   }, 
+      {
+    title: (
+      <Link to="https://ruseleredu.github.io/labsec/">
+        Laboratório de Sistemas Embarcados e Computação (LabSEC)
+      </Link>
+    ),
+    Svg: require("@site/static/img/LabSEC.svg").default,
+    description: (
+      <>
+        Laboratório de Sistemas Embarcados e Computação. O LabSEC é um laboratório de pesquisa e desenvolvimento vinculado ao Departamento Acadêmico de Eletrotécnica (DAELT) da UTFPR - Câmpus Curitiba.
+      </>
+    ),
+  },
   {
     title: (
       <Link to="https://utfpr.curitiba.br/daelt/">
@@ -37,20 +50,7 @@ const FeatureList: FeatureItem[] = [
       </>
     ),
   },
-    {
-    title: (
-      <Link to="http://www.daeln.ct.utfpr.edu.br/">
-        Departamento Acadêmico de Eletrônica (DAELN)
-      </Link>
-    ),
-    Svg: require("@site/static/img/UTFPR_logo.svg").default,
-    description: (
-      <>
-        O
-Departamento Acadêmico de Eletrônica do Câmpus Curitiba da UTFPR é a unidade responsável por coordenar e ministrar os cursos e disciplinas da área de Eletrônica.
-      </>
-    ),
-  },
+
 ];
 
 function Feature({title, Svg, description}: FeatureItem) {
