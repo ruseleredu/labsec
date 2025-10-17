@@ -52,7 +52,7 @@ npm run serve
 ## Deployment
 
 ```bash
-set GIT_USER=AdrianoRuseler
+set GIT_USER=ruseleredu
 npm run deploy
 ```
 
