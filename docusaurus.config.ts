@@ -200,6 +200,35 @@ const config: Config = {
             },
           ],
         },
+        {
+          title: "Doku Sites",
+          items: [
+            {
+              label: "Main Site",
+              href: "https://adrianoruseler.github.io/site/",
+            },
+            {
+              label: "STM32 Docs",
+              href: "https://ruseleredu.github.io/stm32doc/",
+            },
+            {
+              label: "LabSEC",
+              href: "https://ruseleredu.github.io/labsec/",
+            },
+            {
+              label: "Moodle Docs",
+              href: "https://adrianoruseler.github.io/moodle-docs/",
+            },
+            {
+              label: "My Docs",
+              href: "https://adrianoruseler.github.io/my-docs/",
+            },
+            {
+              label: "My DocPage",
+              href: "https://ruseleredu.github.io/my-docpage/",
+            },
+          ],
+        },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} LabSEC, Inc. Built with Docusaurus.`,
     },
