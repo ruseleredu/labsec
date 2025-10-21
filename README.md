@@ -4,7 +4,6 @@ This website is built using [Docusaurus](https://docusaurus.io/), a modern stati
 
 ## Installation
 
-
 ```bash
 npx create-docusaurus@latest labsec classic --typescript
 ```
@@ -58,8 +57,7 @@ npm run deploy
 
 If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
 
-
-## Upgrade Docusaurus
+## Upgrade Docusaurus Packages
 
 To upgrade Docusaurus packages with the latest version, run the following command:
 
