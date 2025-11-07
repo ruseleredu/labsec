@@ -7,6 +7,19 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
+const formatter = new Intl.DateTimeFormat("pt-BR", {
+  timeZone: "America/Sao_Paulo",
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit",
+  hour: "2-digit",
+  minute: "2-digit",
+  second: "2-digit",
+  hourCycle: "h23", // Use 24-hour format
+});
+const utc3Time = formatter.format(new Date());
+const COPYRIGHT_STRING = `Copyright © ${new Date().getFullYear()} LabSEC, Inc. Built with Docusaurus at ${utc3Time} UTC-3.`;
+
 
 const config: Config = {
   title: 'LabSEC',
@@ -44,11 +57,11 @@ const config: Config = {
   // Include the KaTeX CSS for math rendering
   stylesheets: [
     {
-      href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
-      type: 'text/css',
+      href: "https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex.min.css",
+      type: "text/css",
       integrity:
-        'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
-      crossorigin: 'anonymous',
+        "sha384-WcoG4HRXMzYzfCgiyfrySxx90XSl2rxY5mnVY5TwtWE6KLrArNKn0T/mOgNL0Mmi",
+      crossorigin: "anonymous",
     },
   ],
 
@@ -72,6 +85,8 @@ const config: Config = {
             'https://ruseleredu.github.io/labsec/edit/main/',
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
         },
         blog: {
           showReadingTime: true,
@@ -208,6 +223,10 @@ const config: Config = {
               href: "https://adrianoruseler.github.io/site/",
             },
             {
+              label: "SD Docs",
+              href: "https://ruseleredu.github.io/sd-docs/",
+            },
+            {
               label: "STM32 Docs",
               href: "https://ruseleredu.github.io/stm32doc/",
             },
@@ -230,7 +249,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} LabSEC, Inc. Built with Docusaurus.`,
+      copyright: COPYRIGHT_STRING,
     },
     prism: {
       theme: prismThemes.github,
