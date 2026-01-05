@@ -242,10 +242,6 @@ const config: Config = {
               label: "My Docs",
               href: "https://adrianoruseler.github.io/my-docs/",
             },
-            {
-              label: "My DocPage",
-              href: "https://ruseleredu.github.io/my-docpage/",
-            },
           ],
         },
       ],
