@@ -130,6 +130,7 @@ const config: Config = {
           label: 'Tutorial',
         },
         { to: '/blog', label: 'Blog', position: 'left' },
+        { to: "/pdf/CT2026.pdf", label: "Calendário", position: "right", target: '_blank' },
         {
           href: 'https://github.com/ruseleredu/labsec',
           label: 'GitHub',
