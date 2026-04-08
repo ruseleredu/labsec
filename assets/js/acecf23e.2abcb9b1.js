@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklabsec=self.webpackChunklabsec||[]).push([["3220"],{1912(s){s.exports=JSON.parse('{"blogBasePath":"/labsec/blog","blogTitle":"Blog","authorsListPath":"/labsec/blog/authors"}')}}]);
