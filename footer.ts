@@ -105,6 +105,43 @@ const footer: ThemeConfig['footer'] = {
       ],
     },
     {
+      title: "AI", //
+      items: [
+        {
+          label: "Gemini",
+          href: "https://gemini.google.com/app",
+        }, //
+        {
+          label: "ChatGPT",
+          href: "https://chatgpt.com/",
+        }, //
+        {
+          label: "Claude",
+          href: "https://claude.ai/",
+        },
+        {
+          label: "Copilot",
+          href: "https://copilot.microsoft.com/",
+        },
+        {
+          label: "DeepSeek",
+          href: "https://chat.deepseek.com/",
+        },
+        {
+          label: "Grok",
+          href: "https://grok.com/",
+        },
+        {
+          label: "Kimi",
+          href: "https://www.kimi.com/en",
+        },
+        {
+          label: "GLM",
+          href: "https://chat.z.ai/",
+        },
+      ],
+    },
+    {
       title: "Doku Sites",
       items: [
         {
@@ -112,12 +149,20 @@ const footer: ThemeConfig['footer'] = {
           href: "https://adrianoruseler.github.io/site/",
         },
         {
-          label: "SD Docs",
-          href: "https://ruseleredu.github.io/sd-docs/",
+          label: "HIL Docs",
+          href: "https://ruseleredu.github.io/hil-docs/",
         },
         {
           label: "STM32 Docs",
           href: "https://ruseleredu.github.io/stm32doc/",
+        },
+        {
+          label: "Sistemas Digitais",
+          href: "https://ruseleredu.github.io/sd-docs/",
+        },
+        {
+          label: "Analógica",
+          href: "https://ruseleredu.github.io/ea-docs/",
         },
         {
           label: "LabSEC",
@@ -125,11 +170,7 @@ const footer: ThemeConfig['footer'] = {
         },
         {
           label: "Moodle Docs",
-          href: "https://adrianoruseler.github.io/moodle-docs/",
-        },
-        {
-          label: "My Docs",
-          href: "https://adrianoruseler.github.io/my-docs/",
+          href: "https://ruseleredu.github.io/moodle-docs/",
         },
       ],
     },
