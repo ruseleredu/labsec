@@ -62,6 +62,8 @@ const config: Config = {
     locales: ["pt-BR"],
   },
 
+  plugins: [require.resolve('docusaurus-lunr-search')],
+
   presets: [
     [
       'classic',
